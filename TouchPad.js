@@ -175,3 +175,10 @@ touchPad.addEventListener("mouseup", function (e) {
   e.preventDefault();
   document.dispatchEvent(e);
 });
+
+touchPad.addEventListener("mousemove", function (e) {
+  e.preventDefault();
+  if (e.buttons === 1) {
+    window.scrollBy(-e.movementX, -e.movementY);
+  }
+});
